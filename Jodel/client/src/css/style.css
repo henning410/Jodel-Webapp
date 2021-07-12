@@ -1,0 +1,182 @@
+.test {
+	background-color: black;
+}
+
+.spinnerContainer {
+	margin: 100px auto;
+	text-align: center;
+}
+
+.spinner {
+    width: 50px;
+    height: 40px;
+    font-size: 10px;
+    margin: 0 auto;
+}
+
+.spinner > div {
+    background-color: #337ab7;
+    height: 100%;
+    width: 6px;
+    display: inline-block;
+    margin-right: 1px;
+
+    -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
+    animation: sk-stretchdelay 1.2s infinite ease-in-out;
+}
+
+.spinner .rect2 {
+    -webkit-animation-delay: -1.1s;
+    animation-delay: -1.1s;
+}
+
+.pbHeadline {
+	backgroundColor: #00BCD4;
+}
+
+.pbCol {
+	textAlign: center; 
+	padding: 0;
+	height: 60px;
+}
+
+.pbProduct {
+	color: white; margin: 10px auto;
+}
+
+.pbForm {
+	backgroundColor: #FFC107;
+    borderTop: 3px solid white;
+}
+
+.postForm {
+ padding-top:20px;	
+}
+
+/*
+        const fontColor = {
+            color: 'white'
+        }
+
+        const headlineStyle = {
+            backgroundColor: '#00BCD4'
+        }
+        const buttonStyle = {
+            margin: '20px auto'
+        }
+ */  
+ 
+.comment {
+	borderTop: 1px solid white;
+}
+
+.commentCol {
+   marginTop: 20px;
+   paddingLeft: 40px;
+}
+
+.commentText {
+	color: white;
+}
+
+.spinner .rect3 {
+    -webkit-animation-delay: -1.0s;
+    animation-delay: -1.0s;
+}
+
+.spinner .rect4 {
+    -webkit-animation-delay: -0.9s;
+    animation-delay: -0.9s;
+}
+
+.spinner .rect5 {
+    -webkit-animation-delay: -0.8s;
+    animation-delay: -0.8s;
+}
+
+@-webkit-keyframes sk-stretchdelay {
+    0%, 40%, 100% {
+        -webkit-transform: scaleY(0.4)
+    }
+    20% {
+        -webkit-transform: scaleY(1.0)
+    }
+} 
+
+@keyframes sk-stretchdelay {
+    0%, 40%, 100% {
+        transform: scaleY(0.4);
+        -webkit-transform: scaleY(0.4);
+    }
+    20% {
+        transform: scaleY(1.0);
+        -webkit-transform: scaleY(1.0);
+    }
+}
+.activeButton{
+	border-left: 1px solid white;
+	border-right: 1px solid white;
+	color: white;
+	height: 60px;
+	font-size: 1.3em;
+	padding-top: 20px;
+	display: block;
+	text-decoration: underline;
+	pointer-events: none;
+	cursor:default;
+}
+.activeButton:focus{
+	color: white;
+}
+.disabledButton:hover{
+	color: white;
+	background-color: rgba(0,0,0,0.3);	
+}
+.disabledButton{
+	border-left: 1px solid white;
+	border-right: 1px solid white;
+	color: rgba(255,255,255,0.7);
+	height: 60px;
+	font-size: 1.3em;
+	padding-top: 20px;
+	display: block;
+}
+
+.addButton {
+	border-radius: 50%;
+	background-color: rgba(30,30,30,0.5);
+	background-image: none;
+	border: 5px solid white;
+	width: 70px;
+	height: 70px;
+	outline: none;
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+}
+
+.addButton:hover {
+	background-color: rgba(30,30,30,0.8);
+	border: 5px solid white;
+	background-image: none;
+}
+
+.addButton:active {
+	background-color: #bc352b;
+	border: 5px solid white;
+	background-image: none;
+}
+
+.addButton span {
+	top: 26px;
+  	background-color: white;
+  	height: 8px;
+  	border-radius: 5px;
+  	position: absolute;
+ 	left: 15px;
+  	width: 30px;
+}
+.addButton span:first-Child {
+	transform: rotate(90deg);
+}
+

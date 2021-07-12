@@ -1,0 +1,12 @@
+pluginManagement {
+    repositories {
+        mavenLocal()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+    plugins {
+      id 'io.quarkus' version "${quarkusPluginVersion}"
+	  id 'org.siouan.frontend-jdk11' version '4.0.1'
+    }
+}
+rootProject.name='Jodel'
