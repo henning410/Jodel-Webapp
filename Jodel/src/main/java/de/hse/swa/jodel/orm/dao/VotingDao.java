@@ -16,26 +16,24 @@ import java.util.List;
 public class VotingDao {
 
     @Inject
-    EntityManager em; 
+    EntityManager em;
 
     public Voting getVotings(Integer commentid) {
-		String sql = 
+		String sql =
 		"SELECT * " +
 		"FROM voting " +
 		"WHERE comment_id = " + commentid;
-		Query query = em.createNativeQuery(sql, Voting.class); 
-    	 //TypedQuery<Voting> query = em.createQuery("SELECT d FROM Voting d ORDER BY value DESC", Voting.class);
-    	//  Voting results = query.getSingleResult();
-    	 return (Voting)  query.getSingleResult();
+		Query query = em.createNativeQuery(sql, Voting.class);
+		return (Voting)  query.getSingleResult();
     }
-    
+
     public Voting getVoting(Integer id) {
    	 	return em.find(Voting.class, id);
     }
 
 	public List<Voting> getVotings(){
 		String sql = "SELECT * FROM voting";
-		Query query = em.createNativeQuery(sql, Voting.class); 
+		Query query = em.createNativeQuery(sql, Voting.class);
 		List<Voting> results = query.getResultList();
     	 return results;
 	}
@@ -53,7 +51,7 @@ public class VotingDao {
 				return false;
 		}
 	}
-    
+
     @Transactional
 	public Voting save(Voting voting) {
 			em.merge(voting);
@@ -93,13 +91,13 @@ public class VotingDao {
 				return true;
 		}
 	}
-    
+
     @Transactional
 	public Voting addVoting(Voting voting) {
 		em.persist(voting);
 		return voting;
 	}
-    
+
     @Transactional
     public void removeAllVotings() {
     	try {
